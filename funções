@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+float soma(float numero1, float numero2){
+
+  return numero1+numero2;
+}
+
+float subtracao(float numero1, float numero2){
+
+  return numero1-numero2;
+}
+
+float divisao(float numero1, float numero2){
+
+  return numero1/numero2;
+}
+
+float multiplicacao(float numero1, float numero2){
+
+  return numero1*numero2;
+}
+
+float porcentagem(float numero1, float numero2){
+
+  return divisao(multiplicacao(numero1, numero2), 100.0);
+}
+
+int main (){
+    float numero1, numero2, resultado;
+    int operador;
+
+    scanf("%f", &numero1);
+    scanf("%f", &numero2);
+    scanf("%d", &operador);
+    // 1 = + 
+    // 2 = -
+    // 3 = /
+    // 4 = x
+    // 5 = %
+
+    switch(operador){
+      case 1:
+      resultado = soma(numero1, numero2);
+      break;
+      case 2:
+      resultado = subtracao(numero1, numero2);
+      break;
+      case 3:
+      resultado = divisao(numero1, numero2);
+      break;
+      case 4:
+      resultado = multiplicacao(numero1, numero2);
+      break;
+      case 5:
+      resultado = porcentagem(numero1, numero2);
+      break;
+
+    }
+
+    printf("%f", resultado);
+
+  
+
+
+    
+    
+
+}
